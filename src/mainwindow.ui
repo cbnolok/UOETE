@@ -1,0 +1,2000 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1260</width>
+    <height>832</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>UO Enhanced Tileart Editor v0.4</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout_2" rowstretch="1,1,2,2,2,2,2,2,2" columnstretch="3,4,1">
+    <item row="4" column="2">
+     <widget class="Line" name="line_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="Line" name="line_1">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0" rowspan="7">
+     <layout class="QGridLayout" name="gridLayout_list">
+      <item row="0" column="0" colspan="3">
+       <widget class="QListView" name="listView"/>
+      </item>
+      <item row="1" column="2">
+       <widget class="QPushButton" name="pushButton_search">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Search</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="lineEdit_search">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="8" column="0" colspan="3">
+     <layout class="QHBoxLayout" name="horizontalLayout_bottom">
+      <item>
+       <widget class="QPushButton" name="pushButton_save">
+        <property name="text">
+         <string>Save</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="checkBox_backup">
+        <property name="text">
+         <string>Make a backup</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_11">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Preferred</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QProgressBar" name="progressBar">
+        <property name="value">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_18">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Preferred</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_folder">
+        <property name="text">
+         <string>UO EC Folder:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_folder"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_browse">
+        <property name="text">
+         <string>Browse</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_load">
+        <property name="text">
+         <string>Load</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="1" rowspan="7">
+     <widget class="QGraphicsView" name="graphicsView"/>
+    </item>
+    <item row="3" column="2">
+     <layout class="QGridLayout" name="gridLayout_props_radarcol" columnstretch="2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,1,1">
+      <item row="0" column="19" rowspan="4">
+       <layout class="QGridLayout" name="gridLayout_radarcol">
+        <item row="5" column="0">
+         <spacer name="horizontalSpacer_19">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::MinimumExpanding</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>10</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="5" column="1" colspan="2">
+         <widget class="QLabel" name="label_rc_view">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+            <horstretch>1</horstretch>
+            <verstretch>1</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>32</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>-</string>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="3">
+         <spacer name="horizontalSpacer_20">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::MinimumExpanding</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>10</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="0" colspan="4">
+         <widget class="QLabel" name="label_rc_title">
+          <property name="text">
+           <string>RadarCol</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2" colspan="2">
+         <widget class="QLineEdit" name="lineEdit_rc_a">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2" colspan="2">
+         <widget class="QLineEdit" name="lineEdit_rc_r">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2" colspan="2">
+         <widget class="QLineEdit" name="lineEdit_rc_g">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="2" colspan="2">
+         <widget class="QLineEdit" name="lineEdit_rc_b">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <widget class="QLabel" name="label_rc_a">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>10</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>A: </string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" colspan="2">
+         <widget class="QLabel" name="label_rc_r">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>10</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>R: </string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0" colspan="2">
+         <widget class="QLabel" name="label_rc_g">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>10</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>G: </string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0" colspan="2">
+         <widget class="QLabel" name="label_rc_b">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>10</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>B: </string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="0" colspan="19">
+       <widget class="QGroupBox" name="groupBox_props1">
+        <property name="title">
+         <string>Properties - 1</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_8">
+         <property name="leftMargin">
+          <number>3</number>
+         </property>
+         <property name="topMargin">
+          <number>3</number>
+         </property>
+         <property name="rightMargin">
+          <number>3</number>
+         </property>
+         <property name="bottomMargin">
+          <number>3</number>
+         </property>
+         <property name="spacing">
+          <number>3</number>
+         </property>
+         <item row="0" column="0">
+          <layout class="QGridLayout" name="gridLayout_props1">
+           <item row="0" column="11">
+            <spacer name="horizontalSpacer_7">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>10</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="15">
+            <widget class="QLabel" name="label_prop1_Paperdoll">
+             <property name="text">
+              <string>Paperdoll</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <spacer name="horizontalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>10</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="0" column="10">
+            <widget class="QLineEdit" name="lineEdit_prop1_Height"/>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_prop1_Weight">
+             <property name="text">
+              <string>Weight</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="9">
+            <widget class="QLabel" name="label_prop1_Height">
+             <property name="text">
+              <string>Height</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QLabel" name="label_prop1_Quality">
+             <property name="text">
+              <string>Quality</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="12">
+            <widget class="QLabel" name="label_prop1_Gender">
+             <property name="text">
+              <string>Gender</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="13">
+            <widget class="QLineEdit" name="lineEdit_prop1_Value"/>
+           </item>
+           <item row="1" column="4">
+            <widget class="QLineEdit" name="lineEdit_prop1_Off_C8"/>
+           </item>
+           <item row="0" column="15">
+            <widget class="QLabel" name="label_prop1_AcVc">
+             <property name="text">
+              <string>AcVc</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="16">
+            <widget class="QLineEdit" name="lineEdit_prop1_AcVc"/>
+           </item>
+           <item row="1" column="3">
+            <widget class="QLabel" name="label_prop1_Off_C8">
+             <property name="text">
+              <string>Off_C8</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <widget class="QLineEdit" name="lineEdit_prop1_Quality"/>
+           </item>
+           <item row="1" column="10">
+            <widget class="QLineEdit" name="lineEdit_prop1_Race"/>
+           </item>
+           <item row="0" column="7">
+            <widget class="QLineEdit" name="lineEdit_prop1_Quantity"/>
+           </item>
+           <item row="0" column="5">
+            <spacer name="horizontalSpacer_6">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>10</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="0" column="14">
+            <spacer name="horizontalSpacer_10">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>10</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="0" column="12">
+            <widget class="QLabel" name="label_prop1_Value">
+             <property name="text">
+              <string>Value</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="16">
+            <widget class="QLineEdit" name="lineEdit_prop1_Paperdoll"/>
+           </item>
+           <item row="0" column="8">
+            <spacer name="horizontalSpacer_9">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>10</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="9">
+            <widget class="QLabel" name="label_prop1_Race">
+             <property name="text">
+              <string>Race</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_prop1_Slot">
+             <property name="text">
+              <string>Slot</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="13">
+            <widget class="QLineEdit" name="lineEdit_prop1_Gender"/>
+           </item>
+           <item row="0" column="6">
+            <widget class="QLabel" name="label_prop1_Quantity">
+             <property name="text">
+              <string>Quantity</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="6">
+            <widget class="QLabel" name="label_prop1_Appearance">
+             <property name="text">
+              <string>Appearance</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="lineEdit_prop1_Slot"/>
+           </item>
+           <item row="1" column="7">
+            <widget class="QLineEdit" name="lineEdit_prop1_Appearance"/>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="lineEdit_prop1_Weight"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="1" column="0" rowspan="3" colspan="19">
+       <widget class="QGroupBox" name="groupBox_props2">
+        <property name="title">
+         <string>Properties - 2</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_10">
+         <property name="leftMargin">
+          <number>3</number>
+         </property>
+         <property name="topMargin">
+          <number>3</number>
+         </property>
+         <property name="rightMargin">
+          <number>3</number>
+         </property>
+         <property name="bottomMargin">
+          <number>3</number>
+         </property>
+         <property name="spacing">
+          <number>3</number>
+         </property>
+         <item row="0" column="0">
+          <layout class="QGridLayout" name="gridLayout_props2">
+           <item row="0" column="13">
+            <widget class="QLineEdit" name="lineEdit_prop2_Value"/>
+           </item>
+           <item row="0" column="6">
+            <widget class="QLabel" name="label_prop2_Quantity">
+             <property name="text">
+              <string>Quantity</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <spacer name="horizontalSpacer_12">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>10</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="lineEdit_prop2_Weight"/>
+           </item>
+           <item row="0" column="7">
+            <widget class="QLineEdit" name="lineEdit_prop2_Quantity"/>
+           </item>
+           <item row="0" column="3">
+            <widget class="QLabel" name="label_prop2_Quality">
+             <property name="text">
+              <string>Quality</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="5">
+            <spacer name="horizontalSpacer_13">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>10</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="0" column="4">
+            <widget class="QLineEdit" name="lineEdit_prop2_Quality"/>
+           </item>
+           <item row="0" column="8">
+            <spacer name="horizontalSpacer_14">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>10</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_prop2_Weight">
+             <property name="text">
+              <string>Weight</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="15">
+            <widget class="QLabel" name="label_prop2_AcVc">
+             <property name="text">
+              <string>AcVc</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="9">
+            <widget class="QLabel" name="label_prop2_Height">
+             <property name="text">
+              <string>Height</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="11">
+            <spacer name="horizontalSpacer_15">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>10</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="0" column="12">
+            <widget class="QLabel" name="label_prop2_Value">
+             <property name="text">
+              <string>Value</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="10">
+            <widget class="QLineEdit" name="lineEdit_prop2_Height"/>
+           </item>
+           <item row="0" column="14">
+            <spacer name="horizontalSpacer_17">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>10</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_prop2_Slot">
+             <property name="text">
+              <string>Slot</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QLabel" name="label_prop2_Off_C8">
+             <property name="text">
+              <string>Off_C8</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="6">
+            <widget class="QLabel" name="label_prop2_Appearance">
+             <property name="text">
+              <string>Appearance</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="9">
+            <widget class="QLabel" name="label_prop2_Race">
+             <property name="text">
+              <string>Race</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="12">
+            <widget class="QLabel" name="label_prop2_Gender">
+             <property name="text">
+              <string>Gender</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="15">
+            <widget class="QLabel" name="label_prop2_Paperdoll">
+             <property name="text">
+              <string>Paperdoll</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="lineEdit_prop2_Slot"/>
+           </item>
+           <item row="1" column="4">
+            <widget class="QLineEdit" name="lineEdit_prop2_Off_C8"/>
+           </item>
+           <item row="1" column="7">
+            <widget class="QLineEdit" name="lineEdit_prop2_Appearance"/>
+           </item>
+           <item row="1" column="10">
+            <widget class="QLineEdit" name="lineEdit_prop2_Race"/>
+           </item>
+           <item row="1" column="13">
+            <widget class="QLineEdit" name="lineEdit_prop2_Gender"/>
+           </item>
+           <item row="1" column="16" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_prop2_Paperdoll"/>
+           </item>
+           <item row="0" column="16" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_prop2_AcVc"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="5" column="2" rowspan="2">
+     <layout class="QGridLayout" name="gridLayout_flags">
+      <item row="0" column="2" rowspan="14" colspan="4">
+       <widget class="QGroupBox" name="groupBox_flags2">
+        <property name="title">
+         <string>Flags - full</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_6">
+         <property name="leftMargin">
+          <number>3</number>
+         </property>
+         <property name="topMargin">
+          <number>3</number>
+         </property>
+         <property name="rightMargin">
+          <number>3</number>
+         </property>
+         <property name="bottomMargin">
+          <number>3</number>
+         </property>
+         <item row="0" column="0">
+          <layout class="QGridLayout" name="gridLayout_5">
+           <item row="8" column="1">
+            <widget class="QCheckBox" name="checkBox_flag2_Roof">
+             <property name="text">
+              <string>Roof</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QCheckBox" name="checkBox_flag2_Weapon">
+             <property name="text">
+              <string>Weapon</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QCheckBox" name="checkBox_flag2_Translucent">
+             <property name="text">
+              <string>Translucent</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QCheckBox" name="checkBox_flag2_Background">
+             <property name="text">
+              <string>Background</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="2">
+            <widget class="QCheckBox" name="checkBox_flag2_NoShadow">
+             <property name="text">
+              <string>NoShadow</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QCheckBox" name="checkBox_flag2_Map">
+             <property name="text">
+              <string>Map</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0">
+            <widget class="QCheckBox" name="checkBox_flag2_LightSource">
+             <property name="text">
+              <string>LightSource</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QCheckBox" name="checkBox_flag2_Mongen">
+             <property name="text">
+              <string>Mongen</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QCheckBox" name="checkBox_flag2_ArticleThe">
+             <property name="text">
+              <string>ArticleThe</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="0">
+            <widget class="QCheckBox" name="checkBox_flag2_AlphaBlend">
+             <property name="text">
+              <string>AlphaBlend</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QCheckBox" name="checkBox_flag2_Window">
+             <property name="text">
+              <string>Window</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="1">
+            <widget class="QCheckBox" name="checkBox_flag2_NoHouse">
+             <property name="text">
+              <string>NoHouse</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="3">
+            <widget class="QCheckBox" name="checkBox_flag2_ArtUsed">
+             <property name="text">
+              <string>ArtUsed</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QCheckBox" name="checkBox_flag2_Transparent">
+             <property name="text">
+              <string>Transparent</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0">
+            <widget class="QCheckBox" name="checkBox_flag2_Armor">
+             <property name="text">
+              <string>Armor</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="3">
+            <widget class="QCheckBox" name="checkBox_flag2_Generic">
+             <property name="text">
+              <string>Generic</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="0">
+            <widget class="QCheckBox" name="checkBox_flag2_StairRight">
+             <property name="text">
+              <string>StairRight</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="2">
+            <widget class="QCheckBox" name="checkBox_flag2_Container">
+             <property name="text">
+              <string>Container</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QCheckBox" name="checkBox_flag2_Bridge">
+             <property name="text">
+              <string>Bridge</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QCheckBox" name="checkBox_flag2_NoShoot">
+             <property name="text">
+              <string>NoShoot</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="3">
+            <widget class="QCheckBox" name="checkBox_flag2_PixelBleed">
+             <property name="text">
+              <string>PixelBleed</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="2">
+            <widget class="QCheckBox" name="checkBox_flag2_Foliage">
+             <property name="text">
+              <string>Foliage</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QCheckBox" name="checkBox_flag2_Wall">
+             <property name="text">
+              <string>Wall</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="1">
+            <widget class="QCheckBox" name="checkBox_flag2_Animation">
+             <property name="text">
+              <string>Animation</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="2">
+            <widget class="QCheckBox" name="checkBox_flag2_NoDraw">
+             <property name="text">
+              <string>NoDraw</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="1">
+            <widget class="QCheckBox" name="checkBox_flag2_Unused2">
+             <property name="text">
+              <string>Unused2</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="2">
+            <widget class="QCheckBox" name="checkBox_flag2_ArticleA">
+             <property name="text">
+              <string>ArticleA</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="3">
+            <widget class="QCheckBox" name="checkBox_flag2_ArticleAn">
+             <property name="text">
+              <string>ArticleAn</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QCheckBox" name="checkBox_flag2_Impassable">
+             <property name="text">
+              <string>Impassable</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QCheckBox" name="checkBox_flag2_UseNewArt">
+             <property name="text">
+              <string>UseNewArt</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="3">
+            <widget class="QCheckBox" name="checkBox_flag2_StairBack">
+             <property name="text">
+              <string>StairBack</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QCheckBox" name="checkBox_flag2_Ignored">
+             <property name="text">
+              <string>Ignored</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="3">
+            <widget class="QCheckBox" name="checkBox_flag2_Unused1">
+             <property name="text">
+              <string>Unused1</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="3">
+            <widget class="QCheckBox" name="checkBox_flag2_PartialHue">
+             <property name="text">
+              <string>PartialHue</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QCheckBox" name="checkBox_flag2_Damaging">
+             <property name="text">
+              <string>Damaging</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QCheckBox" name="checkBox_flag2_Surface">
+             <property name="text">
+              <string>Surface</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="1">
+            <widget class="QCheckBox" name="checkBox_flag2_MultiMovable">
+             <property name="text">
+              <string>MultiMovable</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="3">
+            <widget class="QCheckBox" name="checkBox_flag2_Wet">
+             <property name="text">
+              <string>Wet</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="2">
+            <widget class="QCheckBox" name="checkBox_flag2_HoverOver">
+             <property name="text">
+              <string>HoverOver</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="3">
+            <widget class="QCheckBox" name="checkBox_flag2_Wearable">
+             <property name="text">
+              <string>Wearable</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="0">
+            <widget class="QCheckBox" name="checkBox_flag2_PlayAnimOnce">
+             <property name="text">
+              <string>PlayAnimOnce</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="2">
+            <widget class="QCheckBox" name="checkBox_flag2_Door">
+             <property name="text">
+              <string>Door</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_flags2">
+             <property name="text">
+              <string>Val:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLabel" name="label_flags2_val">
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="0" column="1" rowspan="14">
+       <widget class="QGroupBox" name="groupBox_flags">
+        <property name="title">
+         <string>Flags</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <property name="leftMargin">
+          <number>3</number>
+         </property>
+         <property name="topMargin">
+          <number>3</number>
+         </property>
+         <property name="rightMargin">
+          <number>3</number>
+         </property>
+         <property name="bottomMargin">
+          <number>3</number>
+         </property>
+         <item row="0" column="0">
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="5" column="0">
+            <widget class="QCheckBox" name="checkBox_flag_ArticleThe">
+             <property name="text">
+              <string>ArticleThe</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="0">
+            <widget class="QCheckBox" name="checkBox_flag_AlphaBlend">
+             <property name="text">
+              <string>AlphaBlend</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QCheckBox" name="checkBox_flag_Transparent">
+             <property name="text">
+              <string>Transparent</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QCheckBox" name="checkBox_flag_Wall">
+             <property name="text">
+              <string>Wall</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QCheckBox" name="checkBox_flag_NoShoot">
+             <property name="text">
+              <string>NoShoot</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="1">
+            <widget class="QCheckBox" name="checkBox_flag_Roof">
+             <property name="text">
+              <string>Roof</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="2">
+            <widget class="QCheckBox" name="checkBox_flag_Container">
+             <property name="text">
+              <string>Container</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QCheckBox" name="checkBox_flag_Ignored">
+             <property name="text">
+              <string>Ignored</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QCheckBox" name="checkBox_flag_Mongen">
+             <property name="text">
+              <string>Mongen</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0">
+            <widget class="QCheckBox" name="checkBox_flag_Armor">
+             <property name="text">
+              <string>Armor</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QCheckBox" name="checkBox_flag_Bridge">
+             <property name="text">
+              <string>Bridge</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="2">
+            <widget class="QCheckBox" name="checkBox_flag_Door">
+             <property name="text">
+              <string>Door</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="3">
+            <widget class="QCheckBox" name="checkBox_flag_Wearable">
+             <property name="text">
+              <string>Wearable</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="0">
+            <widget class="QCheckBox" name="checkBox_flag_StairRight">
+             <property name="text">
+              <string>StairRight</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QCheckBox" name="checkBox_flag_Background">
+             <property name="text">
+              <string>Background</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QCheckBox" name="checkBox_flag_Weapon">
+             <property name="text">
+              <string>Weapon</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QCheckBox" name="checkBox_flag_Damaging">
+             <property name="text">
+              <string>Damaging</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="3">
+            <widget class="QCheckBox" name="checkBox_flag_Unused1">
+             <property name="text">
+              <string>Unused1</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="2">
+            <widget class="QCheckBox" name="checkBox_flag_HoverOver">
+             <property name="text">
+              <string>HoverOver</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="1">
+            <widget class="QCheckBox" name="checkBox_flag_Animation">
+             <property name="text">
+              <string>Animation</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="2">
+            <widget class="QCheckBox" name="checkBox_flag_NoShadow">
+             <property name="text">
+              <string>NoShadow</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="3">
+            <widget class="QCheckBox" name="checkBox_flag_PartialHue">
+             <property name="text">
+              <string>PartialHue</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="1">
+            <widget class="QCheckBox" name="checkBox_flag_NoHouse">
+             <property name="text">
+              <string>NoHouse</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="3">
+            <widget class="QCheckBox" name="checkBox_flag_ArtUsed">
+             <property name="text">
+              <string>ArtUsed</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0">
+            <widget class="QCheckBox" name="checkBox_flag_LightSource">
+             <property name="text">
+              <string>LightSource</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="3">
+            <widget class="QCheckBox" name="checkBox_flag_StairBack">
+             <property name="text">
+              <string>StairBack</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="1">
+            <widget class="QCheckBox" name="checkBox_flag_Unused2">
+             <property name="text">
+              <string>Unused2</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QCheckBox" name="checkBox_flag_Impassable">
+             <property name="text">
+              <string>Impassable</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QCheckBox" name="checkBox_flag_Surface">
+             <property name="text">
+              <string>Surface</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="2">
+            <widget class="QCheckBox" name="checkBox_flag_Foliage">
+             <property name="text">
+              <string>Foliage</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="2">
+            <widget class="QCheckBox" name="checkBox_flag_NoDraw">
+             <property name="text">
+              <string>NoDraw</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QCheckBox" name="checkBox_flag_UseNewArt">
+             <property name="text">
+              <string>UseNewArt</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="3">
+            <widget class="QCheckBox" name="checkBox_flag_PixelBleed">
+             <property name="text">
+              <string>PixelBleed</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="0">
+            <widget class="QCheckBox" name="checkBox_flag_PlayAnimOnce">
+             <property name="text">
+              <string>PlayAnimOnce</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QCheckBox" name="checkBox_flag_Translucent">
+             <property name="text">
+              <string>Translucent</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="2">
+            <widget class="QCheckBox" name="checkBox_flag_ArticleA">
+             <property name="text">
+              <string>ArticleA</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QCheckBox" name="checkBox_flag_Window">
+             <property name="text">
+              <string>Window</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QCheckBox" name="checkBox_flag_Map">
+             <property name="text">
+              <string>Map</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="1">
+            <widget class="QCheckBox" name="checkBox_flag_MultiMovable">
+             <property name="text">
+              <string>MultiMovable</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="3">
+            <widget class="QCheckBox" name="checkBox_flag_ArticleAn">
+             <property name="text">
+              <string>ArticleAn</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="3">
+            <widget class="QCheckBox" name="checkBox_flag_Wet">
+             <property name="text">
+              <string>Wet</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="3">
+            <widget class="QCheckBox" name="checkBox_flag_Generic">
+             <property name="text">
+              <string>Generic</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_flags">
+             <property name="text">
+              <string>Val:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLabel" name="label_flags_val">
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="14" column="5">
+       <widget class="QPushButton" name="pushButton_setAll_newArt">
+        <property name="text">
+         <string>[Set to all entries] Use new art</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="7" column="0">
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Fixed</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>10</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="0" column="2" rowspan="2">
+     <layout class="QGridLayout" name="gridLayout_various">
+      <item row="2" column="9">
+       <widget class="QLineEdit" name="lineEdit_unkFloat3"/>
+      </item>
+      <item row="8" column="5">
+       <widget class="QLabel" name="label_ECyOff">
+        <property name="text">
+         <string>ECyOff</string>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="11">
+       <widget class="QLabel" name="label_CCHeight">
+        <property name="text">
+         <string>CCHeight</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="16">
+       <widget class="QLineEdit" name="lineEdit_facing"/>
+      </item>
+      <item row="1" column="16">
+       <widget class="QLineEdit" name="lineEdit_ID"/>
+      </item>
+      <item row="5" column="9">
+       <widget class="QLineEdit" name="lineEdit_lightRel2"/>
+      </item>
+      <item row="1" column="10">
+       <spacer name="horizontalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>10</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="7" column="8">
+       <widget class="QLabel" name="label_ECxEnd">
+        <property name="text">
+         <string>ECxEnd</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="9">
+       <widget class="QLineEdit" name="lineEdit_ECxEnd"/>
+      </item>
+      <item row="5" column="2">
+       <widget class="QLabel" name="label_UnkDW8">
+        <property name="text">
+         <string>UnkDW8</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="15">
+       <widget class="QLabel" name="label_unkDW7">
+        <property name="text">
+         <string>UnkDW7</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="5">
+       <widget class="QLabel" name="label_uopFile">
+        <property name="text">
+         <string>UOPFile</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="6">
+       <widget class="QLineEdit" name="lineEdit_uopFile">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="6">
+       <widget class="QLineEdit" name="lineEdit_unkFloat5"/>
+      </item>
+      <item row="7" column="2">
+       <widget class="QLabel" name="label_ECxStart">
+        <property name="text">
+         <string>ECxStart</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="9">
+       <widget class="QLineEdit" name="lineEdit_type"/>
+      </item>
+      <item row="10" column="6">
+       <widget class="QLineEdit" name="lineEdit_CCyOff"/>
+      </item>
+      <item row="8" column="11">
+       <widget class="QLabel" name="label_ECHeight">
+        <property name="text">
+         <string>ECHeight</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="5">
+       <widget class="QLabel" name="label_CCyStart">
+        <property name="text">
+         <string>CCyStart</string>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="2">
+       <widget class="QLabel" name="label_CCxOff">
+        <property name="text">
+         <string>CCxOff</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="8">
+       <widget class="QLabel" name="label_type">
+        <property name="text">
+         <string>Type</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="3">
+       <widget class="QLineEdit" name="lineEdit_oldID"/>
+      </item>
+      <item row="10" column="13">
+       <widget class="QLineEdit" name="lineEdit_CCHeight">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="6">
+       <widget class="QLineEdit" name="lineEdit_ECyStart"/>
+      </item>
+      <item row="8" column="13">
+       <widget class="QLineEdit" name="lineEdit_ECHeight">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="11">
+       <widget class="QLabel" name="label_unkDW9">
+        <property name="text">
+         <string>UnkDW9</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="8">
+       <widget class="QLabel" name="label_CCxEnd">
+        <property name="text">
+         <string>CCxEnd</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="13">
+       <widget class="QLineEdit" name="lineEdit_CCyEnd"/>
+      </item>
+      <item row="9" column="3">
+       <widget class="QLineEdit" name="lineEdit_CCxStart"/>
+      </item>
+      <item row="5" column="3">
+       <widget class="QLineEdit" name="lineEdit_unkDW8"/>
+      </item>
+      <item row="1" column="11">
+       <widget class="QLabel" name="label_stringDictOffset">
+        <property name="text">
+         <string>StringDictOffset</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="label_uopBlock">
+        <property name="text">
+         <string>UOPBlock</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="13">
+       <widget class="QLineEdit" name="lineEdit_unkDW9"/>
+      </item>
+      <item row="2" column="16">
+       <widget class="QLineEdit" name="lineEdit_fixedZero"/>
+      </item>
+      <item row="9" column="9">
+       <widget class="QLineEdit" name="lineEdit_CCxEnd"/>
+      </item>
+      <item row="10" column="5">
+       <widget class="QLabel" name="label_CCyOff">
+        <property name="text">
+         <string>CCyOff</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="5">
+       <widget class="QLabel" name="label_lightRel1">
+        <property name="text">
+         <string>LightRel1</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="5">
+       <widget class="QLabel" name="label_unkBool2">
+        <property name="text">
+         <string>UnkBool2</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="15">
+       <widget class="QLabel" name="label_ECWidthMax">
+        <property name="text">
+         <string>ECWidthMax</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QLineEdit" name="lineEdit_uopBlock">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="16">
+       <widget class="QLineEdit" name="lineEdit_unkDW7"/>
+      </item>
+      <item row="8" column="16">
+       <widget class="QLineEdit" name="lineEdit_ECHeightMax">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="11">
+       <widget class="QLabel" name="label_CCyEnd_2">
+        <property name="text">
+         <string>CCyEnd</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="8">
+       <widget class="QLabel" name="label_unkFloat3">
+        <property name="text">
+         <string>UnkFloat3</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="6">
+       <widget class="QLineEdit" name="lineEdit_ECyOff"/>
+      </item>
+      <item row="7" column="11">
+       <widget class="QLabel" name="label_CCyEnd">
+        <property name="text">
+         <string>ECyEnd</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="5">
+       <widget class="QLabel" name="label_unkFloat5">
+        <property name="text">
+         <string>UnkFloat5</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="2">
+       <widget class="QLabel" name="label_CCxStart">
+        <property name="text">
+         <string>CCxStart</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="15">
+       <widget class="QLabel" name="label_facing">
+        <property name="text">
+         <string>Facing</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="13">
+       <widget class="QLineEdit" name="lineEdit_stringDictOffset"/>
+      </item>
+      <item row="2" column="6">
+       <widget class="QLineEdit" name="lineEdit_unkBool2"/>
+      </item>
+      <item row="10" column="3">
+       <widget class="QLineEdit" name="lineEdit_CCxOff"/>
+      </item>
+      <item row="1" column="15">
+       <widget class="QLabel" name="label_ID">
+        <property name="text">
+         <string>ID</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="2">
+       <widget class="QLabel" name="label_oldID">
+        <property name="text">
+         <string>OldID</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="8">
+       <widget class="QLabel" name="label_lightRel2">
+        <property name="text">
+         <string>LightRel2</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="6">
+       <widget class="QLineEdit" name="lineEdit_CCyStart"/>
+      </item>
+      <item row="8" column="15">
+       <widget class="QLabel" name="label_ECHeightMax">
+        <property name="text">
+         <string>ECHeightMax</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3">
+       <widget class="QLineEdit" name="lineEdit_unkBool1"/>
+      </item>
+      <item row="8" column="2">
+       <widget class="QLabel" name="label_ECxOff">
+        <property name="text">
+         <string>ECxOff</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="11">
+       <widget class="QLabel" name="label_unkFloat4">
+        <property name="text">
+         <string>UnkFloat4</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="14">
+       <spacer name="horizontalSpacer_8">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>10</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="8" column="8">
+       <widget class="QLabel" name="label_ECWidth">
+        <property name="text">
+         <string>ECWidth</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="6">
+       <widget class="QLineEdit" name="lineEdit_lightRel1"/>
+      </item>
+      <item row="10" column="9">
+       <widget class="QLineEdit" name="lineEdit_CCWidth">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="9">
+       <widget class="QLineEdit" name="lineEdit_version"/>
+      </item>
+      <item row="1" column="8">
+       <widget class="QLabel" name="label_version">
+        <property name="text">
+         <string>Version</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="7">
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>10</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="2" column="13">
+       <widget class="QLineEdit" name="lineEdit_unkFloat4"/>
+      </item>
+      <item row="7" column="3">
+       <widget class="QLineEdit" name="lineEdit_ECxStart"/>
+      </item>
+      <item row="7" column="13">
+       <widget class="QLineEdit" name="lineEdit_ECyEnd"/>
+      </item>
+      <item row="2" column="2">
+       <widget class="QLabel" name="label_unkBool1">
+        <property name="text">
+         <string>UnkBool1</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="4">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>10</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="10" column="8">
+       <widget class="QLabel" name="label_CCWidth">
+        <property name="text">
+         <string>CCWidth</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="3">
+       <widget class="QLineEdit" name="lineEdit_ECxOff"/>
+      </item>
+      <item row="8" column="9">
+       <widget class="QLineEdit" name="lineEdit_ECWidth">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="15">
+       <widget class="QLabel" name="label_fixedZero">
+        <property name="text">
+         <string>FixedZero</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="5">
+       <widget class="QLabel" name="label_ECyStart">
+        <property name="text">
+         <string>ECyStart</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="16">
+       <widget class="QLineEdit" name="lineEdit_ECWidthMax">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="11">
+       <widget class="QLabel" name="label_unkByte6">
+        <property name="text">
+         <string>UnkByte6</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="13">
+       <widget class="QLineEdit" name="lineEdit_unkByte6"/>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
